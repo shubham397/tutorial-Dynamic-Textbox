@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { Header, Footer } from "./common";
 import DashboardRoutes from "./DashboardRoutes";
 import TextBox from "./textBox/textBoxContaier";
@@ -36,16 +36,33 @@ const DashboardContainer = () => {
     <div className={DashboardContainer.styles.root}>
       <Header />
 
-      <button onClick={addTextBox} className="btn" style={btnStyle} type='button'><i className="fa fa-plus-square"></i> Add</button>
+      <button 
+        onClick={addTextBox} 
+        className="btn" 
+        style={btnStyle} 
+        type='button'>
+        <i 
+          className="fa fa-plus-square" 
+        /> 
+          Add
+      </button>
 
       {textBox.map((text_box, index) => {
         return (
-          <TextBox ind={index} value={text_box.value} onTextChange={onTextBoxChange} onRemove={removeTextBox} />
+          <TextBox 
+            ind={index} 
+            value={text_box.value} 
+            onTextChange={onTextBoxChange} 
+            onRemove={removeTextBox} 
+          />
 
         );
       })}
 
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+      <link 
+        rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+      />
 
       <div className={DashboardContainer.styles.content}>
         <DashboardRoutes />

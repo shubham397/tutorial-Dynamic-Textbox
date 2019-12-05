@@ -12,6 +12,7 @@ let mainDivStyle = {
     return (
       <div className="mainDiv" style={mainDivStyle}>
         <Route path="/country" component={Country} />
+        <Route path="/crud" component={Country} />
         {/* <Route path="/dashboard/attendance" component={AttendanceReport} /> */}
       </div>
     );

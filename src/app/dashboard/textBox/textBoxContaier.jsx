@@ -19,9 +19,18 @@ const TextBox=(props)=> {
 
     return (
       <div style={divStyle} key={`${ind}`}>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+        <link 
+          rel="stylesheet" 
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+        />
         
-        <input style={inputStyle} type="text" value={value} onChange={e=>props.onTextChange(props.ind,e)} placeholder="Enter Text Here" />
+        <input 
+          style={inputStyle} 
+          type="text" 
+          value={value} 
+          onChange={e=>props.onTextChange(props.ind,e)} 
+          placeholder="Enter Text Here" 
+        />
         
         <button onClick={deleteTextBox} className="btn" type='button'>
           <i className="fa fa-trash" /> 
